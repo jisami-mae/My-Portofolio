@@ -1,5 +1,5 @@
 export default defineConfig({
-  base: "/jisami-mae/",
+  base: "/My-Portofolio/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
