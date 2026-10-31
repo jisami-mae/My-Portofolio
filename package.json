@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/jisami-mae/My-Portofolio.git",
+  "homepage": "https://jisami-mae.github.io/My-Portofolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

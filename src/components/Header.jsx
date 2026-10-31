@@ -7,9 +7,13 @@ import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md"
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa"
 
 const navMenu = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/skills", label: "Skills" },
   { href: "/hobbies", label: "Hobbies" },
+  { href: "/achievements", label: "Achievements" },
+  { href: "/projects", label: "Projects" },
+
 ];
 
 const Header = () => {
