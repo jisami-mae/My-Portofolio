@@ -62,9 +62,9 @@ my-portfolio-main/
 
 5. Open the local URL displayed in the terminal.
 
-## 🌍 Live Website
+## Live Portfolio
 
-https://my-portofolio-maesmuohg-jessamae.vercel.app
+[View My Portfolio](https://my-portofolio-3vn8k3vxe-jessamae.vercel.app/)
 
 ## 💻 GitHub Repository
 
