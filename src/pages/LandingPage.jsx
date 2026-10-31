@@ -2,56 +2,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import profileImg from '../assets/pfp.jpg'
-import messageImg from '../assets/message-preview.jpg'
-import registrationImg from '../assets/student-registration.jpg'
-import gradeImg from '../assets/grade-summary.jpg'
-import boxImg from '../assets/organized-box.jpg'
 
 import { TypeAnimation } from 'react-type-animation'
 import { FaLaptopCode, FaTools, FaDatabase } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 const LandingPage = () => {
-
-  const featuredProjects = [
-    {
-      number: '01',
-      title: 'One-Page Live Message Preview',
-      category: 'Web Development',
-      image: messageImg,
-      description:
-        'A webpage that allows users to type a message and instantly see a live preview using JavaScript.',
-      technologies: ['HTML', 'CSS', 'JavaScript']
-    },
-    {
-      number: '02',
-      title: 'Student Registration Form',
-      category: 'Web Development',
-      image: registrationImg,
-      description:
-        'A registration form that collects student information and checks inputs through form validation.',
-      technologies: ['HTML', 'CSS', 'PHP']
-    },
-    {
-      number: '03',
-      title: 'Grade Summary',
-      category: 'Programming',
-      image: gradeImg,
-      description:
-        'A program that calculates student scores, displays the average, and provides grade remarks.',
-      technologies: ['PHP', 'HTML', 'CSS']
-    },
-    {
-      number: '04',
-      title: 'Organized Box Project',
-      category: 'Creative School Project',
-      image: boxImg,
-      description:
-        'A creative school project focused on organizing items in a neat and practical way.',
-      technologies: ['Creativity', 'Design', 'Organization']
-    }
-  ]
-
   return (
     <>
       {/* HERO SECTION */}
@@ -228,104 +184,6 @@ const LandingPage = () => {
             className="inline-block bg-stone-800 text-white px-8 py-3 rounded-full hover:bg-rose-600 transition duration-300"
           >
             Discover More About Me →
-          </Link>
-        </div>
-
-      </section>
-
-      {/* FEATURED PROJECTS SECTION */}
-      <section className="bg-rose-50 py-20 px-6 md:px-12 lg:px-20">
-
-        <motion.div
-          className="max-w-4xl mx-auto text-center mb-14"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-rose-600 font-semibold tracking-widest mb-3">
-            MY WORKS
-          </p>
-
-          <h2
-            className="text-3xl sm:text-4xl text-stone-800 mb-5"
-            style={{ fontFamily: 'satoshi-black' }}
-          >
-            Featured Projects
-          </h2>
-
-          <p className="text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-            Here are some of the projects I created during my studies.
-            Each one represents my learning experiences, creativity,
-            and continuous improvement as an IT student.
-          </p>
-        </motion.div>
-
-        {/* PROJECT CARDS */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-
-          {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.number}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-rose-100"
-            >
-
-              {/* PROJECT IMAGE */}
-              <div className="h-48 overflow-hidden bg-orange-100">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition duration-500"
-                />
-              </div>
-
-              {/* PROJECT DETAILS */}
-              <div className="p-5">
-
-                <p className="text-rose-600 text-xs uppercase tracking-widest mb-2">
-                  {project.category}
-                </p>
-
-                <h3
-                  className="text-lg text-stone-800 mb-3"
-                  style={{ fontFamily: 'satoshi-bold' }}
-                >
-                  {project.title}
-                </h3>
-
-                <p className="text-zinc-600 text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-rose-100 text-rose-700 text-xs rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-              </div>
-            </motion.div>
-          ))}
-
-        </div>
-
-        {/* VIEW ALL PROJECTS BUTTON */}
-        <div className="text-center mt-12">
-          <Link
-            to="/projects"
-            className="inline-block bg-rose-600 text-white px-9 py-3 rounded-full hover:bg-rose-700 transition duration-300 shadow-md"
-          >
-            View All Projects →
           </Link>
         </div>
 
