@@ -1,3 +1,4 @@
+
 # 🌟 Jessamae Liba – Personal Portfolio
 
 Welcome to my personal portfolio website! This project showcases my background, skills, hobbies, achievements, and projects as a BSIT student.
@@ -50,25 +51,34 @@ my-portfolio-main/
 ## 🚀 How to Run Locally
 
 1. Clone the repository:
-   `git clone https://github.com/jisami-mae/My-Portofolio.git`
+
+   ```bash
+   git clone https://github.com/jisami-mae/My-Portofolio.git
+   ```
 
 2. Open the project folder.
 
 3. Install dependencies:
-   `npm install`
+
+   ```bash
+   npm install
+   ```
 
 4. Start the development server:
-   `npm run dev`
+
+   ```bash
+   npm run dev
+   ```
 
 5. Open the local URL displayed in the terminal.
 
-## Live Portfolio
+## 🌐 Live Portfolio
 
-[View My Portfolio](https://my-portofolio-3vn8k3vxe-jessamae.vercel.app/)
+[Visit My Live Portfolio](https://my-portofolio-3vn8k3vxe-jessamae.vercel.app/)
 
 ## 💻 GitHub Repository
 
-https://github.com/jisami-mae/My-Portofolio
+[View My GitHub Repository](https://github.com/jisami-mae/My-Portofolio)
 
 ## 👩‍💻 Developer
 
