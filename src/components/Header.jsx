@@ -36,7 +36,6 @@ const Header = () => {
   const [sheetOpen, setSheetOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  // Contact form states
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
@@ -45,7 +44,6 @@ const Header = () => {
   const location = useLocation()
   const currentPath = location.pathname
 
-  // Header scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
@@ -53,11 +51,11 @@ const Header = () => {
 
     window.addEventListener("scroll", handleScroll)
 
-    return () =>
+    return () => {
       window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
-  // Contact form submission
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -185,9 +183,9 @@ const Header = () => {
       <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
         <SheetContent
           side="right"
-          className="bg-red-50 overflow-y-auto w-full sm:max-w-md"
+          className="bg-red-50 flex flex-col w-full sm:max-w-md h-[100dvh] max-h-[100dvh] overflow-hidden"
         >
-          <SheetHeader>
+          <SheetHeader className="shrink-0">
             <SheetTitle
               className="text-2xl px-4 mt-8 text-stone-800"
               style={{ fontFamily: "satoshi-bold" }}
@@ -196,8 +194,9 @@ const Header = () => {
             </SheetTitle>
           </SheetHeader>
 
+          {/* Scrollable Content */}
           <div
-            className="px-6 space-y-5 pb-8"
+            className="px-6 space-y-5 pb-10 flex-1 min-h-0 overflow-y-auto overscroll-contain"
             style={{ fontFamily: "satoshi-medium" }}
           >
             <p className="text-sm text-stone-600">
@@ -210,8 +209,8 @@ const Header = () => {
                 href="mailto:jessamaeliba05@gmail.com"
                 className="flex items-center gap-3 hover:text-rose-500 transition"
               >
-                <MdEmail className="text-rose-500" size={20} />
-                <span className="text-sm text-zinc-700">
+                <MdEmail className="text-rose-500 shrink-0" size={20} />
+                <span className="text-sm text-zinc-700 break-all">
                   jessamaeliba05@gmail.com
                 </span>
               </a>
@@ -220,21 +219,21 @@ const Header = () => {
                 href="tel:+639457755702"
                 className="flex items-center gap-3 hover:text-rose-500 transition"
               >
-                <MdPhone className="text-rose-500" size={20} />
+                <MdPhone className="text-rose-500 shrink-0" size={20} />
                 <span className="text-sm text-zinc-700">
                   +63 9457755702
                 </span>
               </a>
 
               <div className="flex items-center gap-3">
-                <MdLocationOn className="text-rose-500" size={20} />
+                <MdLocationOn className="text-rose-500 shrink-0" size={20} />
                 <span className="text-sm text-zinc-700">
                   Marikina, Philippines
                 </span>
               </div>
             </div>
 
-            {/* Interactive Contact Form */}
+            {/* Contact Form */}
             <div className="border-t border-rose-200 pt-5">
               <h3
                 className="text-lg text-stone-800 mb-3"
@@ -247,12 +246,10 @@ const Header = () => {
                 onSubmit={handleSubmit}
                 className="space-y-3"
               >
-                {/* Name */}
                 <div>
                   <label className="block text-sm text-stone-700 mb-1">
                     Your Name
                   </label>
-
                   <input
                     type="text"
                     value={name}
@@ -263,12 +260,10 @@ const Header = () => {
                   />
                 </div>
 
-                {/* Email */}
                 <div>
                   <label className="block text-sm text-stone-700 mb-1">
                     Your Email
                   </label>
-
                   <input
                     type="email"
                     value={email}
@@ -279,12 +274,10 @@ const Header = () => {
                   />
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="block text-sm text-stone-700 mb-1">
                     Your Message
                   </label>
-
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -295,7 +288,6 @@ const Header = () => {
                   />
                 </div>
 
-                {/* Send Message Button */}
                 <Button
                   type="submit"
                   className="w-full bg-rose-400 hover:bg-rose-500 text-white transition-all"
