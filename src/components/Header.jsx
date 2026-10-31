@@ -2,18 +2,23 @@
 import React, { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { Menu, X, Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
+
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet"
+
 import { Button } from "@/components/ui/button"
+
 import {
   MdEmail,
   MdPhone,
   MdLocationOn,
 } from "react-icons/md"
+
 import {
   FaFacebookF,
   FaGithub,
@@ -40,6 +45,7 @@ const Header = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [formStatus, setFormStatus] = useState("")
+  const [isSending, setIsSending] = useState(false)
 
   const location = useLocation()
   const currentPath = location.pathname
@@ -56,25 +62,43 @@ const Header = () => {
     }
   }, [])
 
-  const handleSubmit = (e) => {
+  // SEND MESSAGE USING EMAILJS
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const subject = encodeURIComponent(
-      `Portfolio Inquiry from ${name}`
-    )
+    setFormStatus("")
+    setIsSending(true)
 
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    )
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      message: message,
+    }
 
-    const mailtoLink =
-      `mailto:jessamaeliba05@gmail.com?subject=${subject}&body=${body}`
+    try {
+      await emailjs.send(
+        "service_v5wrv9m",
+        "template_bfynt88",
+        templateParams,
+        "0u96tHfcurpAPo1lO"
+      )
 
-    setFormStatus(
-      "Your email app should open with your message ready to send."
-    )
+      setFormStatus(
+        "Your message was sent successfully! Thank you for contacting me. 💗"
+      )
 
-    window.location.href = mailtoLink
+      setName("")
+      setEmail("")
+      setMessage("")
+    } catch (error) {
+      console.error("EmailJS Error:", error)
+
+      setFormStatus(
+        "Sorry, your message could not be sent. Please try again."
+      )
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
@@ -290,14 +314,18 @@ const Header = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-rose-400 hover:bg-rose-500 text-white transition-all"
+                  disabled={isSending}
+                  className="w-full bg-rose-400 hover:bg-rose-500 text-white transition-all disabled:opacity-60"
                 >
                   <Send size={16} className="mr-2" />
-                  Send Message
+                  {isSending ? "Sending..." : "Send Message"}
                 </Button>
 
                 {formStatus && (
-                  <p className="text-xs text-green-700 bg-green-50 p-3 rounded-lg">
+                  <p
+                    role="status"
+                    className="text-xs text-stone-700 bg-rose-100 p-3 rounded-lg"
+                  >
                     {formStatus}
                   </p>
                 )}

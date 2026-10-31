@@ -70,13 +70,6 @@ const LandingPage = () => {
               About Me
             </Link>
 
-            <Link
-              to="/achievements"
-              className="border-2 border-stone-800 text-stone-800 px-7 py-3 rounded-full hover:bg-stone-800 hover:text-white transition duration-300"
-            >
-              My Achievements
-            </Link>
-
           </div>
         </motion.div>
 
