@@ -1,97 +1,80 @@
-# 🌟 My Portfolio
+# 🌟 Jessamae Liba – Personal Portfolio
 
-Your personal developer portfolio powered by **React** and **Vite** — fast, modern, and easy to extend.
+Welcome to my personal portfolio website! This project showcases my background, skills, hobbies, achievements, and projects as a BSIT student.
 
----
+## 🛠 Technologies Used
+- React.js
+- Vite
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
 
-## 🛠 Tech Stack
+## 📖 Website Sections
+- Home – Introduction and welcome section
+- About – Personal information and background
+- Skills – My personal and technical skills
+- Hobbies – My interests and activities
+- Achievements – My academic achievements
+- Projects – My programming projects
+- Contact Me – Contact information and social links
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
-</p>
+## 📂 Project Structure
 
----
-
-## 📖 About the Project
-
-This is my personal developer portfolio, built with **React** (via **Vite**) for fast development and smooth performance.  
-It serves as a platform to showcase **hobbies**, **skills**, and **contact details** with a clean and modern design.
-
----
-
-## 📂 File Structure
-
-```
-my-portfolio/
+```text
+my-portfolio-main/
 ├── public/
-│   ├── index.html          # Entry HTML
-│   └── favicon.ico
 ├── src/
-│   ├── components/         # Reusable UI components
-│   ├── pages/              # Portfolio pages (About, Projects, Contact, etc.)
-│   ├── App.jsx             # Main application file
-│   └── main.jsx            # React entrypoint
-├── README.md               # This documentation
-├── package.json            # NPM dependencies & scripts
-├── vite.config.js          # Vite configuration
-└── jsconfig.json           # JavaScript project config
+│   ├── assets/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── ui/
+│   ├── pages/
+│   │   ├── LandingPage.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── hobbies.jsx
+│   │   ├── Achievements.jsx
+│   │   └── Projects.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── ScrollToTop.jsx
+├── README.md
+├── package.json
+├── package-lock.json
+└── vite.config.js
 ```
 
----
+## 🚀 How to Run Locally
 
-## 🚀 Setup & Running Locally
+1. Clone the repository:
+   `git clone https://github.com/jisami-mae/My-Portofolio.git`
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/jisami-mae/Jesamae.git
-   cd my-portfolio
-   ```
+2. Open the project folder.
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+3. Install dependencies:
+   `npm install`
 
-3. **Launch development server:**
-   ```bash
-   npm run dev
-   ```
+4. Start the development server:
+   `npm run dev`
 
-4. Open your browser and go to `http://localhost:5173` to preview your portfolio.
+5. Open the local URL displayed in the terminal.
 
----
+## 🌍 Live Website
 
-## 🌍 Deployment
+https://my-portofolio-maesmuohg-jessamae.vercel.app
 
-**Build for production:**
-```bash
-npm run build
-```
+## 💻 GitHub Repository
 
-Deploy the contents of the `dist/` folder.  
-If using **GitHub Pages**, configure the Pages source to your deploy branch (e.g., `gh-pages` or `main`) and ensure you're serving from the correct folder.
+https://github.com/jisami-mae/My-Portofolio
 
----
+## 👩‍💻 Developer
 
-## 🎨 Customization Ideas
+**Jessamae Liba**
 
-- Add social media links (GitHub, LinkedIn, Twitter)
-- Include project descriptions with live-demo links
-- Implement light/dark mode toggle
-- Use animations (e.g., smooth scrolling, entrance effects)
-- Enhance accessibility with proper aria attributes and keyboard navigation
+Bachelor of Science in Information Technology (BSIT)  
+ICCT Colleges
 
----
-
-## 👩‍💻 Author
-
-**JessamaeLiba**  
-Feel free to reach out through my profile or any linked contact methods!
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
+Created as an individual portfolio project.
