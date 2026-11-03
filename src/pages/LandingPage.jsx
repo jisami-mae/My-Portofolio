@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom'
 import profileImg from '../assets/pfp.jpg'
 
 import { TypeAnimation } from 'react-type-animation'
@@ -61,16 +60,6 @@ const LandingPage = () => {
             and educational achievements.
           </p>
 
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-
-            <Link
-              to="/about"
-              className="bg-rose-600 text-white px-7 py-3 rounded-full hover:bg-rose-700 transition duration-300 shadow-md"
-            >
-              About Me
-            </Link>
-
-          </div>
         </motion.div>
 
         {/* PROFILE PICTURE */}
@@ -164,20 +153,6 @@ const LandingPage = () => {
             </motion.div>
           ))}
 
-        </div>
-
-        {/* PORTFOLIO NAVIGATION */}
-        <div className="text-center mt-14">
-          <p className="text-stone-700 mb-5">
-            Explore my personal background, skills, hobbies, and school achievements.
-          </p>
-
-          <Link
-            to="/about"
-            className="inline-block bg-stone-800 text-white px-8 py-3 rounded-full hover:bg-rose-600 transition duration-300"
-          >
-            Discover More About Me →
-          </Link>
         </div>
 
       </section>
