@@ -4,6 +4,7 @@
 Welcome to my personal portfolio website! This project showcases my background, skills, hobbies, achievements, and projects as a BSIT student.
 
 ## 🛠 Technologies Used
+
 - React.js
 - Vite
 - HTML
@@ -12,6 +13,7 @@ Welcome to my personal portfolio website! This project showcases my background, 
 - Tailwind CSS
 
 ## 📖 Website Sections
+
 - Home – Introduction and welcome section
 - About – Personal information and background
 - Skills – My personal and technical skills
@@ -74,7 +76,7 @@ my-portfolio-main/
 
 ## 🌐 Live Portfolio
 
-[Visit My Live Portfolio](https://my-portofolio-3vn8k3vxe-jessamae.vercel.app/)
+[Visit My Live Portfolio](https://my-portofolio-git-main-jessamae.vercel.app/)
 
 ## 💻 GitHub Repository
 
